@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo flexbox</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 20px;
+            background: #f7f7f7;
+            font-family: Arial, sans-serif;
+            border-radius: 10px;
+        }
+
+        .flex-container{
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            background: #eee;
+        }
+
+        .flex-item{
+            color: #fff;
+            padding: 20px;
+            font-weight: bold;
+            min-width: 40px;
+            text-align: center;
+            gap: 4px;
+            border-radius: 10px;
+        }
+        .item-1 {background: #3498db;}
+        .item-2 {background: #e74c3c;}
+        .item-3 {background: #2ecc71;}
+
+        .linha{
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .eu{
+            width: 60px;
+            height: 60px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .vermelho{
+            background: #e74c3c;
+        }
+        .azul{
+            background: #3498db;
+        }
+        .amarelo{
+            background: #f1c40f;
+        }
+        .verde{
+            background: #2ecc71;
+        }
+
+        .texto_exercício{
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .container-flex-ex3{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .placar{
+            width: 120px;
+            min-height: 220px;
+            background: #16213e;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #3498db;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tetris{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .placar h3, .placar h4{
+            margin: 0;
+        }
+
+        .placar p{
+            margin: 5px 0;
+        }
+
+        .proxima-peca-container{
+            display: flex;
+            flex-wrap: wrap;
+            width: 56px;
+            gap: 4px;
+            margin-top: 10px;
+        }
+
+        .bloco-peca{
+            width: 24px;
+            height: 24px;
+            background: #9b59b6;
+            border-radius: 4px;
+        }
+
+        .tabuleiro{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            background: #1a1a2e;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item item-1">1</div>
+        <div class="flex-item item-2">2</div>
+        <div class="flex-item item-3">3</div>
+    </div>
+    <div class="linha">
+            <div class="eu vermelho"></div>
+            <div class="eu vermelho"></div>
+            <div class="eu vermelho"></div>
+            <div class="eu vermelho"></div>
+        </div>
+        <div class="linha">
+            <div class="eu azul"></div>
+            <div class="eu azul"></div>
+            <div class="eu azul"></div>
+            <div class="eu azul"></div>
+        </div>
+        <div class="linha">
+            <div class="eu amarelo"></div>
+            <div class="eu amarelo"></div>
+            <div class="eu amarelo"></div>
+            <div class="eu amarelo"></div>
+        </div>
+        <div class="linha">
+            <div class="eu verde"></div>
+            <div class="eu verde"></div>
+            <div class="eu verde"></div>
+            <div class="eu verde"></div>
+        </div>
+
+    <h1>Exercício 1</h1>
+
+    <div class="tabuleiro">
+        <div class="linha">
+            <div class="eu vermelho"></div>
+            <div class="eu vermelho"></div>
+            <div class="eu vermelho"></div>
+            <div class="eu vermelho"></div>
+        </div>
+        <div class="linha">
+            <div class="eu azul"></div>
+            <div class="eu azul"></div>
+            <div class="eu azul"></div>
+            <div class="eu azul"></div>
+        </div>
+        <div class="linha">
+            <div class="eu amarelo"></div>
+            <div class="eu amarelo"></div>
+            <div class="eu amarelo"></div>
+            <div class="eu amarelo"></div>
+        </div>
+        <div class="linha">
+            <div class="eu verde"></div>
+            <div class="eu verde"></div>
+            <div class="eu verde"></div>
+            <div class="eu verde"></div>
+        </div>
+    </div>
+    <hr>
+    
+    <h1>Exercício 2</h1>
+
+        <div class="tabuleiro">
+            <div class="linha">
+                <div class="eu vermelho texto_exercício"></div>
+                <div class="eu vermelho texto_exercício"></div>
+                <div class="eu vermelho texto_exercício"></div>
+                <div class="eu vermelho texto_exercício"></div>
+            </div>  
+        </div>
+
+        <hr>
+
+    <h1>Exercício 3</h1>
+        <div class="tabuleiro">
+            <div class="linha">
+                <div class="eu vermelho"></div>
+                <div class="eu vermelho"></div>
+                <div class="eu vermelho"></div>
+                <div class="eu vermelho"></div>
+            </div>
+            <div class="linha">
+                <div class="eu azul"></div>
+                <div class="eu azul"></div>
+                <div class="eu azul"></div>
+                <div class="eu azul"></div>
+            </div>
+            <div class="linha">
+                <div class="eu amarelo"></div>
+                <div class="eu amarelo"></div>
+                <div class="eu amarelo"></div>
+                <div class="eu amarelo"></div>
+            </div>
+            <div class="linha">
+                <div class="eu verde"></div>
+                <div class="eu verde"></div>
+                <div class="eu verde"></div>
+                <div class="eu verde"></div>
+            </div>
+            <div class="placar">Placar
+                <h1>0</h1>
+            </div>
+        </div>
+    </div>
+
+    <h1>Exercício 4</h1>
+    <div class="tabuleiro">
+    <div class="container-flex-ex3">
+        <div class="placar">
+            <div>
+                <h3>Placar</h3>
+                <p id="pontos" style="font-size: 2rem; font-weight: bold; color: #f1c40f;">0</p>
+                <p style="font-size: 0.9rem;">Linhas: <span id="linhas" style="font-weight: bold; color: #2ecc71;">0</span></p>
+            </div>
+
+            <div>
+                <h4 style="font-size: 1rem; margin-top: 15px;">Próxima</h4>
+                <div class="proxima-peca-container">
+                    <div class="bloco-peca"></div>
+                    <div class="bloco-peca"></div>
+                    <div class="bloco-peca"></div>
+                    <div class="bloco-peca"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<!-- Aula 13 -->
